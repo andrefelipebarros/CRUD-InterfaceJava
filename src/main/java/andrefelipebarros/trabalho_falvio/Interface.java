@@ -79,8 +79,7 @@ public class Interface extends javax.swing.JFrame {
         ));
         jTable1.setGridColor(new java.awt.Color(255, 255, 255));
         jTable1.setOpaque(false);
-        jTable1.setSelectionBackground(new java.awt.Color(153, 255, 255));
-        jTable1.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setSelectionBackground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTable1);
 
         btnAdicionar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -123,13 +122,13 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel5.setText("Status");
 
-        txtNome.setText("jTextField1");
+        txtNome.setText("Nome");
 
-        txtCPF.setText("jTextField2");
+        txtCPF.setText("xxx.xxx.xxx-xx");
 
         txtSaldo.setText("jTextField4");
 
-        boxCartao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        boxCartao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cartão Rio Card", "Cartão", "Cartão 3", "Cartão 4" }));
         boxCartao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boxCartaoActionPerformed(evt);

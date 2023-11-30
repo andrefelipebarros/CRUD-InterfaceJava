@@ -320,12 +320,12 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtNome">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
+            <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCPF">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
+            <Property name="text" type="java.lang.String" value="xxx.xxx.xxx-xx"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSaldo">
@@ -339,10 +339,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+                <StringItem index="0" value="Cart&#xe3;o 1"/>
+                <StringItem index="1" value="Cart&#xe3;o 2"/>
+                <StringItem index="2" value="Cart&#xe3;o 3"/>
+                <StringItem index="3" value="Cart&#xe3;o 4"/>
               </StringArray>
             </Property>
           </Properties>
