@@ -244,18 +244,21 @@ public class Interface extends javax.swing.JFrame {
             String Cartao = boxCartao.getSelectedItem().toString();
             String Saldo = txtSaldo.getText();
             
+            boolean status = checkStatus.isSelected();
+            String statusText = status ? "Disponível" : "Indisponível";
             
             
             tblModel.setValueAt(nome, jTable1.getSelectedRow(), 0);
             tblModel.setValueAt(CPF , jTable1.getSelectedRow(), 1);
             tblModel.setValueAt(Cartao ,jTable1.getSelectedRow(), 2);
             tblModel.setValueAt(Saldo ,jTable1.getSelectedRow(), 3);
+             tblModel.setValueAt(statusText, jTable1.getSelectedRow(), 4);
             
             JOptionPane.showMessageDialog(this, "Atualizado com Sucesso!!");
         } 
         else {
             if(jTable1.getRowCount() == 0){
-                JOptionPane.showMessageDialog(this, "Tabela está Vazia!!");
+                JOptionPane.showMessageDialog(this, "Tabela está vazia!!");
             }else{
                 JOptionPane.showMessageDialog(this, "Selecione uma linha para ser atualizada!!");
             }
@@ -291,7 +294,7 @@ public class Interface extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Porfavor, preencha todas as etapas.");
         }
         else{
-                String data[] = {txtNome.getText(), txtCPF.getText(), boxCartao.getSelectedItem().toString(), txtSaldo.getText()};
+                String data[] = {txtNome.getText(), txtCPF.getText(), boxCartao.getSelectedItem().toString(), txtSaldo.getText(), (checkStatus.isSelected() ? "Disponível" : "Indisponível")};
 
                 DefaultTableModel tbModel = (DefaultTableModel) jTable1.getModel();
 
@@ -303,7 +306,7 @@ public class Interface extends javax.swing.JFrame {
                 txtCPF.setText("");
                 boxCartao.setSelectedIndex(-1);
                 txtSaldo.setText("");
-                
+                checkStatus.setSelected(false);
         }
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
@@ -319,6 +322,7 @@ public class Interface extends javax.swing.JFrame {
         String tblCPF = tblModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
         String tblBoxCartao = tblModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
         String tblSaldo = tblModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String tblStatus = tblModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
         
         txtNome.setText(tblNome);
         txtCPF.setText(tblCPF);
@@ -327,6 +331,8 @@ public class Interface extends javax.swing.JFrame {
         boxCartao.setSelectedIndex(index);
         /////////////
         txtSaldo.setText(tblSaldo);
+        
+        checkStatus.setSelected(tblStatus.equals("Disponível"));
         
         
     }//GEN-LAST:event_jTable1MouseClicked
