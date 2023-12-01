@@ -14,12 +14,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Interface extends javax.swing.JFrame {
 
+
     /**
      * Creates new form Cadastro
      */
     public Interface() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -301,6 +303,7 @@ public class Interface extends javax.swing.JFrame {
                 txtCPF.setText("");
                 boxCartao.setSelectedIndex(-1);
                 txtSaldo.setText("");
+                
         }
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
