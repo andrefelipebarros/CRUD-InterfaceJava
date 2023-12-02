@@ -129,10 +129,6 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel5.setText("Status");
 
-        txtNome.setText("Nome");
-
-        txtCPF.setText("xxx.xxx.xxx-xx");
-
         txtSaldo.setText("0,00");
         txtSaldo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
@@ -294,7 +290,7 @@ public class Interface extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Porfavor, preencha todas as etapas.");
         }
         else{
-                String data[] = {txtNome.getText(), txtCPF.getText(), boxCartao.getSelectedItem().toString(), txtSaldo.getText(), (checkStatus.isSelected() ? "Disponível" : "Indisponível")};
+                String data[] = {txtNome.getText(), txtCPF.getText(), boxCartao.getSelectedItem().toString(), txtSaldo.getText(), (checkStatus.isSelected() ? "Ativo" : "Inativo")};
 
                 DefaultTableModel tbModel = (DefaultTableModel) jTable1.getModel();
 
@@ -332,7 +328,7 @@ public class Interface extends javax.swing.JFrame {
         /////////////
         txtSaldo.setText(tblSaldo);
         
-        checkStatus.setSelected(tblStatus.equals("Disponível"));
+        checkStatus.setSelected(tblStatus.equals("Ativo"));
         
         
     }//GEN-LAST:event_jTable1MouseClicked

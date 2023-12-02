@@ -314,14 +314,8 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNome">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nome"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCPF">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="xxx.xxx.xxx-xx"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSaldo">
           <Properties>
